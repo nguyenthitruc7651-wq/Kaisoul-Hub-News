@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>KAISOUL HUB NEWS</title>
+  <meta name="description" content="KAISOUL HUB NEWS — Tin tức nhanh, rõ ràng và cập nhật.">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="topbar">
+
+    <button class="icon-btn" id="menuBtn" aria-label="Menu">
+      ☰
+    </button>
+
+    <div class="brand">
+      <strong>KAISOUL</strong>
+      <span>HUB NEWS</span>
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Tìm kiếm">
+        ⌕
+      </button>
+
+      <button class="icon-btn" id="notificationBtn" aria-label="Thông báo">
+        ♧
+      </button>
+
+      <button class="avatar-btn" id="profileBtn">
+        <span>U</span>
+      </button>
+    </div>
+
+  </header>
+
+
+  <!-- ================= SEARCH ================= -->
+  <section class="search-panel" id="searchPanel">
+
+    <div class="search-box">
+      <span>⌕</span>
+
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Tìm bài viết, chủ đề, tác giả..."
+        autocomplete="off"
+      >
+
+      <button id="clearSearch">×</button>
+    </div>
+
+    <div class="search-filters">
+
+      <select id="searchCategory">
+        <option value="all">Tất cả danh mục</option>
+        <option value="vietnam">Việt Nam</option>
+        <option value="world">Thế giới</option>
+        <option value="sports">Thể thao</option>
+        <option value="tech">Công nghệ</option>
+        <option value="game">Game</option>
+        <option value="economy">Kinh tế</option>
+        <option value="entertainment">Giải trí</option>
+      </select>
+
+      <select id="searchTime">
+        <option value="all">Mọi thời gian</option>
+        <option value="today">Hôm nay</option>
+        <option value="week">7 ngày qua</option>
+        <option value="month">30 ngày qua</option>
+      </select>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+      <strong>KAISOUL HUB NEWS</strong>
+      <button id="closeSidebar">×</button>
+    </div>
+
+    <nav>
+
+      <a href="#" class="side-link active" data-section="home">
+        Trang chủ
+      </a>
+
+      <a href="#breaking" class="side-link">
+        Breaking News
+      </a>
+
+      <a href="#featured" class="side-link">
+        Tin nổi bật
+      </a>
+
+      <a href="#latest" class="side-link">
+        Mới nhất
+      </a>
+
+      <a href="#trending" class="side-link">
+        Trending
+      </a>
+
+      <div class="nav-title">
+        DANH MỤC
+      </div>
+
+      <a href="#vietnam" class="side-link">
+        Việt Nam
+      </a>
+
+      <a href="#world" class="side-link">
+        Thế giới
+      </a>
+
+      <a href="#sports" class="side-link">
+        Thể thao
+      </a>
+
+      <a href="#tech" class="side-link">
+        Công nghệ
+      </a>
+
+      <a href="#game" class="side-link">
+        Game
+      </a>
+
+      <a href="#economy" class="side-link">
+        Kinh tế
+      </a>
+
+      <a href="#entertainment" class="side-link">
+        Giải trí
+      </a>
+
+      <div class="nav-title">
+        CÁ NHÂN
+      </div>
+
+      <a href="saved.html" class="side-link">
+        Bài đã lưu
+      </a>
+
+      <a href="profile.html" class="side-link">
+        Hồ sơ
+      </a>
+
+      <a href="login.html" class="side-link">
+        Đăng nhập
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+
+  <!-- ================= MAIN ================= -->
+  <main class="container">
+
+
+    <!-- ================= BREAKING ================= -->
+    <section class="breaking-section" id="breaking">
+
+      <div class="section-heading breaking-heading">
+        <div>
+          <span class="live-dot"></span>
+          <span>BREAKING NEWS</span>
+        </div>
+
+        <small>Cập nhật liên tục</small>
+      </div>
+
+      <div class="breaking-card">
+
+        <div class="breaking-label">
+          BREAKING
+        </div>
+
+        <h1 id="breakingTitle">
+          Tin tức mới nhất đang được cập nhật
+        </h1>
+
+        <p id="breakingDescription">
+          KAISOUL HUB NEWS sẽ hiển thị những thông tin quan trọng và mới nhất tại đây.
+        </p>
+
+        <button class="read-btn" id="breakingRead">
+          Đọc tin →
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURED ================= -->
+    <section id="featured">
+
+      <div class="section-heading">
+        <h2>Tin nổi bật</h2>
+        <button class="text-btn">
+          Xem tất cả
+        </button>
+      </div>
+
+      <div class="featured-grid">
+
+        <article class="featured-main news-card">
+
+          <div class="image-placeholder">
+            <span>NEWS</span>
+          </div>
+
+          <div class="card-content">
+
+            <span class="category-tag">
+              Việt Nam
+            </span>
+
+            <h2>
+              Những thông tin đáng chú ý được cập nhật hôm nay
+            </h2>
+
+            <p>
+              Tổng hợp những tin tức nổi bật đang được quan tâm.
+            </p>
+
+            <div class="article-meta">
+              <span>KAISOUL NEWS</span>
+              <span>•</span>
+              <span>10 phút trước</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <div class="featured-side">
+
+          <article class="small-news news-card">
+
+            <div class="small-image image-placeholder">
+              NEWS
+            </div>
+
+            <div>
+              <span class="category-tag">
+                Công nghệ
+              </span>
+
+              <h3>
+                Công nghệ mới đang thay đổi cách chúng ta sử dụng Internet
+              </h3>
+
+              <span class="time">
+                25 phút trước
+              </span>
+            </div>
+
+          </article>
+
+
+          <article class="small-news news-card">
+
+            <div class="small-image image-placeholder">
+              NEWS
+            </div>
+
+            <div>
+              <span class="category-tag">
+                Thể thao
+              </span>
+
+              <h3>
+                Những diễn biến đáng chú ý trong ngày
+              </h3>
+
+              <span class="time">
+                40 phút trước
+              </span>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FOR YOU ================= -->
+    <section id="forYou">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Dành cho bạn</h2>
+          <p class="section-subtitle">
+            Tin tức dựa trên những chủ đề bạn quan tâm
+          </p>
+        </div>
+
+        <button class="text-btn">
+          Tùy chỉnh
+        </button>
+
+      </div>
+
+      <div class="horizontal-news">
+
+        <article class="horizontal-card news-card">
+
+          <div class="card-image image-placeholder">
+            NEWS
+          </div>
+
+          <div class="card-content">
+
+            <span class="category-tag">
+              Công nghệ
+            </span>
+
+            <h3>
+              Những xu hướng công nghệ đáng chú ý
+            </h3>
+
+            <div class="article-meta">
+              KAISOUL NEWS · 1 giờ trước
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="horizontal-card news-card">
+
+          <div class="card-image image-placeholder">
+            NEWS
+          </div>
+
+          <div class="card-content">
+
+            <span class="category-tag">
+              Game
+            </span>
+
+            <h3>
+              Tin tức game mới nhất trong ngày
+            </h3>
+
+            <div class="article-meta">
+              KAISOUL NEWS · 2 giờ trước
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= TRENDING ================= -->
+    <section id="trending">
+
+      <div class="section-heading">
+
+        <h2>Trending</h2>
+
+        <button class="text-btn">
+          Xem thêm
+        </button>
+
+      </div>
+
+      <div class="trending-list">
+
+        <article class="trend-item">
+
+          <div class="trend-number">
+            01
+          </div>
+
+          <div class="trend-content">
+
+            <span class="category-tag">
+              Thế giới
+            </span>
+
+            <h3>
+              Chủ đề đang được nhiều độc giả quan tâm
+            </h3>
+
+            <div class="trend-meta">
+              12.4K lượt xem · 2.1K lượt lưu
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="trend-item">
+
+          <div class="trend-number">
+            02
+          </div>
+
+          <div class="trend-content">
+
+            <span class="category-tag">
+              Công nghệ
+            </span>
+
+            <h3>
+              Xu hướng công nghệ nổi bật hôm nay
+            </h3>
+
+            <div class="trend-meta">
+              9.8K lượt xem · 1.4K lượt lưu
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="trend-item">
+
+          <div class="trend-number">
+            03
+          </div>
+
+          <div class="trend-content">
+
+            <span class="category-tag">
+              Thể thao
+            </span>
+
+            <h3>
+              Những diễn biến mới nhất trong thể thao
+            </h3>
+
+            <div class="trend-meta">
+              8.2K lượt xem · 1.1K lượt lưu
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= NEWS BRIEF ================= -->
+    <section id="brief">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>News Brief</h2>
+          <p class="section-subtitle">
+            Những ý chính bạn cần biết
+          </p>
+        </div>
+
+      </div>
+
+      <div class="brief-card">
+
+        <span class="category-tag">
+          Hôm nay
+        </span>
+
+        <h3>
+          Bản tin nhanh
+        </h3>
+
+        <ul>
+          <li>Thông tin nổi bật được cập nhật trong ngày.</li>
+          <li>Các sự kiện đáng chú ý đang diễn ra.</li>
+          <li>Những chủ đề đang nhận được nhiều sự quan tâm.</li>
+          <li>Thông tin mới từ các nguồn tin đã được kiểm tra.</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= LATEST ================= -->
+    <section id="latest">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Mới nhất</h2>
+          <p class="section-subtitle">
+            Các bài viết mới được cập nhật
+          </p>
+        </div>
+
+      </div>
+
+      <div class="latest-list">
+
+
+        <article class="latest-card news-card">
+
+          <div class="latest-image image-placeholder">
+            NEWS
+          </div>
+
+          <div class="latest-content">
+
+            <div class="article-top">
+
+              <span class="category-tag">
+                Việt Nam
+              </span>
+
+              <span class="time">
+                5 phút trước
+              </span>
+
+            </div>
+
+            <h3>
+              Tin tức mới nhất được cập nhật trên KAISOUL HUB NEWS
+            </h3>
+
+            <p>
+              Nội dung mô tả ngắn của bài viết sẽ được hiển thị ở đây.
+            </p>
+
+            <div class="article-footer">
+
+              <span>
+                KAISOUL NEWS
+              </span>
+
+              <button class="save-btn">
+                ♡
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="latest-card news-card">
+
+          <div class="latest-image image-placeholder">
+            NEWS
+          </div>
+
+          <div class="latest-content">
+
+            <div class="article-top">
+
+              <span class="category-tag">
+                Kinh tế
+              </span>
+
+              <span class="time">
+                18 phút trước
+              </span>
+
+            </div>
+
+            <h3>
+              Những thông tin kinh tế đáng chú ý
+            </h3>
+
+            <p>
+              Tổng hợp thông tin mới nhất từ các nguồn tin.
+            </p>
+
+            <div class="article-footer">
+
+              <span>
+                KAISOUL NEWS
+              </span>
+
+              <button class="save-btn">
+                ♡
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="latest-card news-card">
+
+          <div class="latest-image image-placeholder">
+            NEWS
+          </div>
+
+          <div class="latest-content">
+
+            <div class="article-top">
+
+              <span class="category-tag">
+                Giải trí
+              </span>
+
+              <span class="time">
+                32 phút trước
+              </span>
+
+            </div>
+
+            <h3>
+              Tin giải trí mới nhất hôm nay
+            </h3>
+
+            <p>
+              Những nội dung đang được độc giả quan tâm.
+            </p>
+
+            <div class="article-footer">
+
+              <span>
+                KAISOUL NEWS
+              </span>
+
+              <button class="save-btn">
+                ♡
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <button class="load-more" id="loadMore">
+        Xem thêm tin
+      </button>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+    <section id="categories">
+
+      <div class="section-heading">
+        <h2>Danh mục</h2>
+      </div>
+
+      <div class="category-grid">
+
+        <a href="#vietnam" class="category-box">
+          <strong>Việt Nam</strong>
+          <span>Tin trong nước</span>
+        </a>
+
+        <a href="#world" class="category-box">
+          <strong>Thế giới</strong>
+          <span>Tin quốc tế</span>
+        </a>
+
+        <a href="#sports" class="category-box">
+          <strong>Thể thao</strong>
+          <span>Thể thao</span>
+        </a>
+
+        <a href="#tech" class="category-box">
+          <strong>Công nghệ</strong>
+          <span>Công nghệ mới</span>
+        </a>
+
+        <a href="#game" class="category-box">
+          <strong>Game</strong>
+          <span>Gaming</span>
+        </a>
+
+        <a href="#economy" class="category-box">
+          <strong>Kinh tế</strong>
+          <span>Kinh doanh</span>
+        </a>
+
+        <a href="#entertainment" class="category-box">
+          <strong>Giải trí</strong>
+          <span>Showbiz</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SOURCE ================= -->
+    <section class="source-info">
+
+      <div class="source-icon">
+        ✓
+      </div>
+
+      <div>
+
+        <h3>
+          Nguồn tin rõ ràng
+        </h3>
+
+        <p>
+          KAISOUL HUB NEWS hiển thị nguồn và thời gian cập nhật của mỗi bài viết.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ================= BOTTOM NAV ================= -->
+  <nav class="bottom-nav">
+
+    <a href="#" class="bottom-item active">
+      <span>⌂</span>
+      <small>Trang chủ</small>
+    </a>
+
+    <a href="#trending" class="bottom-item">
+      <span>↗</span>
+      <small>Trending</small>
+    </a>
+
+    <button class="bottom-search" id="bottomSearch">
+      ⌕
+    </button>
+
+    <a href="saved.html" class="bottom-item">
+      <span>♡</span>
+      <small>Đã lưu</small>
+    </a>
+
+    <a href="profile.html" class="bottom-item">
+      <span>◯</span>
+      <small>Tài khoản</small>
+    </a>
+
+  </nav>
+
+
+  <!-- ================= NOTIFICATION PANEL ================= -->
+  <div class="modal" id="notificationModal">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <h2>Thông báo</h2>
+
+        <button class="close-modal">
+          ×
+        </button>
+
+      </div>
+
+      <div class="empty-state">
+
+        <div class="empty-icon">
+          ♧
+        </div>
+
+        <h3>
+          Chưa có thông báo
+        </h3>
+
+        <p>
+          Bạn sẽ nhận thông báo về Breaking News và chủ đề đang theo dõi.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= PROFILE MODAL ================= -->
+  <div class="modal" id="profileModal">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <h2>Tài khoản</h2>
+
+        <button class="close-modal">
+          ×
+        </button>
+
+      </div>
+
+      <div class="profile-preview">
+
+        <div class="large-avatar">
+          U
+        </div>
+
+        <h3>
+          Khách
+        </h3>
+
+        <p>
+          Đăng nhập để sử dụng đầy đủ tính năng.
+        </p>
+
+        <a href="login.html" class="primary-btn">
+          Đăng nhập
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= TOAST ================= -->
+  <div class="toast" id="toast">
+    <span id="toastMessage">
+      Đã lưu bài viết
+    </span>
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+
+    <strong>KAISOUL HUB NEWS</strong>
+
+    <p>
+      Tin tức nhanh • Rõ ràng • Cập nhật
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#">Giới thiệu</a>
+      <a href="#">Điều khoản</a>
+      <a href="#">Chính sách</a>
+      <a href="#">Liên hệ</a>
+
+    </div>
+
+    <small>
+      © 2026 KAISOUL HUB NEWS
+    </small>
+
+  </footer>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
